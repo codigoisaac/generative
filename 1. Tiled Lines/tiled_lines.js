@@ -10,11 +10,11 @@ canvas.height = size * dpr;
 context.scale(dpr, dpr);
 
 context.lineCap = "square";
-context.lineWidth = 2;
+context.lineWidth = 4;
 
 const step = 20;
 
-context.strokeStyle = "#ccc";
+context.strokeStyle = "#eee";
 
 function draw(x, y, width, height) {
   const right = Math.random() >= 0.5;
