@@ -1,0 +1,13 @@
+:root {
+  --black: #0a0a0a;
+  --wolf: #ccc;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--wolf);
+}
+
+a {
+  color: var(--wolf);
+}
