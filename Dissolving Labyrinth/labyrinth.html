@@ -8,17 +8,23 @@
     <style>
       body {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
 
         margin: 0;
         background: #0a0a0a;
       }
+
+      #controls {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
     </style>
   </head>
   <body>
     <canvas width="320" height="320"></canvas>
-    <form action="">
+    <div id="controls">
       <input
         type="number"
         name="step"
@@ -35,7 +41,8 @@
         max="400"
         value="1"
       />
-    </form>
+      <button id="generateBtn">Generate</button>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -3,7 +3,8 @@ const canvas = document.querySelector("canvas"),
   size = window.innerHeight,
   dpr = window.devicePixelRatio,
   stepInput = document.querySelector("#step"),
-  linewInput = document.querySelector("#linew");
+  linewInput = document.querySelector("#linew"),
+  genBtn = document.querySelector("#generateBtn");
 
 canvas.width = size * dpr;
 canvas.height = size * dpr;
@@ -29,6 +30,7 @@ function draw(x, y, width, height) {
 function generate() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
+  // set step
   let realStep = parseInt(stepInput.value),
     step = realStep;
 
@@ -42,6 +44,7 @@ function generate() {
     stepInput.value = 700;
   }
 
+  // set line width
   let realLineW = parseInt(linewInput.value);
   context.lineWidth = realLineW;
 
@@ -55,6 +58,7 @@ function generate() {
     linewInput.value = 400;
   }
 
+  // do the drawing
   for (let x = 0; x < size; x += step) {
     for (let y = 0; y < size; y += step) {
       draw(x, y, step, step);
@@ -67,3 +71,4 @@ generate();
 // inputs
 stepInput.addEventListener("change", generate);
 linewInput.addEventListener("change", generate);
+genBtn.addEventListener("click", generate);
