@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin: 0;
+  background: #0a0a0a;
+
+  color: #ccc;
+}
+
+#left,
+#right {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#left h1 {
+  font-size: 1em;
+  font-weight: lighter;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+input,
+button {
+  background-color: #ccc;
+}
