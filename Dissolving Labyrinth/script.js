@@ -2,13 +2,13 @@ const canvas = document.querySelector("canvas"),
   context = canvas.getContext("2d"),
   size = window.innerHeight,
   dpr = window.devicePixelRatio,
-  stepInput = document.querySelector("#step");
+  stepInput = document.querySelector("#step"),
+  linewInput = document.querySelector("#linew");
 
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 context.scale(dpr, dpr);
 context.lineCap = "square";
-context.lineWidth = 4;
 context.strokeStyle = "#eee";
 
 function draw(x, y, width, height) {
@@ -29,8 +29,8 @@ function draw(x, y, width, height) {
 function generate() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  realStep = parseInt(stepInput.value);
-  let step = realStep;
+  let realStep = parseInt(stepInput.value),
+    step = realStep;
 
   if (realStep < 15) {
     step = 15;
@@ -42,6 +42,19 @@ function generate() {
     stepInput.value = 700;
   }
 
+  let realLineW = parseInt(linewInput.value);
+  context.lineWidth = realLineW;
+
+  if (realLineW < 1) {
+    context.lineWidth = 1;
+    alert("por favor insira um valor entre 1 e 400.");
+    linewInput.value = 1;
+  } else if (realLineW > 400) {
+    context.lineWidth = 400;
+    alert("por favor insira um valor entre 1 e 400.");
+    linewInput.value = 400;
+  }
+
   for (let x = 0; x < size; x += step) {
     for (let y = 0; y < size; y += step) {
       draw(x, y, step, step);
@@ -51,5 +64,6 @@ function generate() {
 
 generate();
 
-// input
+// inputs
 stepInput.addEventListener("change", generate);
+linewInput.addEventListener("change", generate);
