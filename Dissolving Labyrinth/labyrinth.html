@@ -9,10 +9,30 @@
       body {
         display: flex;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: space-between;
 
         margin: 0;
         background: #0a0a0a;
+
+        color: #ccc;
+      }
+
+      #left,
+      #right {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #left h1 {
+        font-size: 1em;
+        font-weight: lighter;
+      }
+
+      h1,
+      p {
+        margin: 0;
       }
 
       #controls {
@@ -20,28 +40,43 @@
         flex-direction: column;
         gap: 2px;
       }
+
+      input,
+      button {
+        background-color: #ccc;
+      }
     </style>
   </head>
   <body>
+    <!-- empty div for flexbox purposes -->
+    <div id="left">
+      <h1>Dissolving Labyrinth</h1>
+      <p>by códigoisaac</p>
+    </div>
     <canvas width="320" height="320"></canvas>
-    <div id="controls">
-      <input
-        type="number"
-        name="step"
-        id="step"
-        min="15"
-        max="700"
-        value="15"
-      />
-      <input
-        type="number"
-        name="lineWidth"
-        id="linew"
-        min="1"
-        max="400"
-        value="1"
-      />
-      <button id="generateBtn">Generate</button>
+    <div id="right">
+      <p>Generative</p>
+      <div id="controls">
+        <label for="step">Step:</label>
+        <input
+          type="number"
+          name="step"
+          id="step"
+          min="15"
+          max="700"
+          value="15"
+        />
+        <label for="step">Line Width:</label>
+        <input
+          type="number"
+          name="lineWidth"
+          id="linew"
+          min="1"
+          max="400"
+          value="1"
+        />
+        <button id="generateBtn">Generate</button>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
