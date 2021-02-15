@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400&display=swap");
+
 body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
   margin: 0;
   background: #0a0a0a;
-
   color: #ccc;
+  font-family: "Sora", sans-serif;
+  font-size: 0.8em;
 }
 
 #left,
