@@ -15,12 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 10px;
 }
 
-#left h1 {
-  font-size: 1em;
-  font-weight: lighter;
-  margin: 0;
+#right {
+  align-items: flex-end;
 }
 
 p {
