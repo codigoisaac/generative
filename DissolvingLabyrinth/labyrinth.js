@@ -50,11 +50,11 @@ function generate() {
 
   if (realLineW < 1) {
     context.lineWidth = 1;
-    alert("por favor insira um valor entre 1 e 400.");
+    alert("Por favor insira um valor entre 1 e 400.");
     linewInput.value = 1;
   } else if (realLineW > 400) {
     context.lineWidth = 400;
-    alert("por favor insira um valor entre 1 e 400.");
+    alert("Por favor insira um valor entre 1 e 400.");
     linewInput.value = 400;
   }
 

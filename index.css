@@ -10,4 +10,6 @@ body {
 
 a {
   color: var(--wolf);
+  display: block;
+  margin: 30px;
 }

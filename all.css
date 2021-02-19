@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400&display=swap");
 
+:root {
+  --black: #0a0a0a;
+  --wolf: #ccc;
+}
+
+a {
+  color: var(--wolf);
+}
+
 body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin: 0;
-  background: #0a0a0a;
-  color: #ccc;
+  background-color: var(--black);
+  color: var(--wolf);
   font-family: "Sora", sans-serif;
   font-size: 0.8em;
 }
@@ -36,9 +45,9 @@ p {
 
 input,
 button {
-  background-color: #ccc;
+  background-color: var(--wolf);
 }
 
 a {
-  color: #ccc;
+  color: var(--wolf);
 }
