@@ -15,7 +15,10 @@ let step = 10,
 for (let i = step; i <= size; i += step) {
   let line = [];
   for (let j = step; j <= size - step; j += step) {
-    let point = { x: j, y: i };
+    let distanceToCenter = Math.abs(j - size / 2),
+      variance = Math.max(size / 2 - 50 - distanceToCenter, 0),
+      random = ((Math.random() * variance) / 2) * -1,
+      point = { x: j, y: i + random };
     line.push(point);
   }
   lines.push(line);
